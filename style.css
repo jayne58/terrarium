@@ -8,11 +8,15 @@ body {
 #left-container {
 	background-color: #eee;
 	width: 15%;
-	left: 0px;
+	left:0px;
 	top: 0px;
 	position: absolute;
 	height: 100%;
 	padding: 10px;
+	display: grid;
+	grid-template-rows: 13%;
+	
+    
 }
 
 #right-container {
@@ -23,13 +27,16 @@ body {
 	position: absolute;
 	height: 100%;
 	padding: 10px;
+	display: grid;
+	grid-template-rows: 13%;
+	
 }
-.plant-holder {
+/* .plant-holder {
 	position: relative;
 	height: 13%;
-	left: -10px;
+	left: -10px; */
    
-}
+
 
 .plant {
 	position: absolute;
