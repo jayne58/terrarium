@@ -41,49 +41,25 @@ document.onpointerup = stopElementDrag;
         document.onpointermove = null;
     }
 }
-document.getElementsByClassName('plant').addEventListener("mouseover", zoom);
+const nummbersArray = []
+
+for(i=document.querySelectorAll('.plant').length; i>0 ; i--) {
+
+nummbersArray.push(i)
+
+}
+  console.log(nummbersArray)  
+nummbersArray.forEach( i => {
+    document.getElementById('plant' + i).addEventListener("mouseover", zoom);
+console.log(document.getElementById('plant' + i))
 function zoom() {
-    var GFG1 = document.getElemenstByClassName('plant');
+    var GFG1 = document.getElementById('plant' + i);
     var currWidth1 = GFG1.clientWidth;
     GFG1.style.width = (currWidth1 + 100) + "px";
 }
-document.getElementsByClassName('plant').addEventListener("click", zoomin);
+document.getElementById('plant'+ i).addEventListener("click", zoomin);
 function zoomin() {
-    var GFG1 = document.getElementsByClassName('plant');
+    var GFG1 = document.getElementById('plant' + i);
     var currWidth1 = GFG1.clientWidth;
  GFG1.style.width = (currWidth1 - 100) + "px";}
-
-// document.getElementById('plant2').addEventListener("mouseover", zoom);
-// function zoom() {
-//     var GFG2 = document.getElementById('plant2');
-//     var currWidth2 = GFG2.clientWidth;
-//     GFG2.style.width = (currWidth2+ 100) + "px";
-// }
-// document.getElementById('plant2').addEventListener("click", zoomin);
-// function zoomin() {
-//     var GFG2 = document.getElementById('plant2');
-//     var currWidth2 = GFG2.clientWidth;
-//         GFG2.style.width = (currWidth2 - 100) + "px";}
-// document.getElementById('plant3').addEventListener("mouseover", zoom3);
-// function zoom3() {
-//     var GFG3 = document.getElementById('plant3');
-//     var currWidth3 = GFG3.clientWidth;
-//     GFG3.style.width = (currWidth3 + 100) + "px";
-// }
-// document.getElementById('plant3').addEventListener("click", zoomin3);
-// function zoomin3() {
-//     var GFG3 = document.getElementById('plant3');
-//     var currWidth3= GFG3.clientWidth;
-//  GFG3.style.width = (currWidth3 - 100) + "px";}
-//  document.getElementById('plant4').addEventListener("mouseover", zoom4);
-// function zoom4() {
-//     var GFG4 = document.getElementById('plant4');
-//     var currWidth4 = GFG4.clientWidth;
-//     GFG4.style.width = (currWidth4 + 100) + "px";
-// }
-// document.getElementById('plant4').addEventListener("click", zoomin4);
-// function zoomin4() {
-//     var GFG4 = document.getElementById('plant4');
-//     var currWidth4= GFG4.clientWidth;
-//  GFG4.style.width = (currWidth4- 100) + "px";}
-  
+})
