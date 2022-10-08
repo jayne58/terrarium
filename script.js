@@ -57,7 +57,7 @@ function zoom() {
     var currWidth1 = GFG1.clientWidth;
     GFG1.style.width = (currWidth1 + 100) + "px";
 }
-document.getElementById('plant'+ i).addEventListener("click", zoomin);
+document.getElementById('plant'+ i).addEventListener("mouseout", zoomin);
 function zoomin() {
     var GFG1 = document.getElementById('plant' + i);
     var currWidth1 = GFG1.clientWidth;
