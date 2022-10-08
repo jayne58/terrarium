@@ -13,7 +13,6 @@ dragElement(document.getElementById('plant12'));
 dragElement(document.getElementById('plant13'));
 dragElement(document.getElementById('plant14'));
 function dragElement(terrariumElement) {
-	//set 4 positions for positioning on the screen
 	let pos1 = 0,
 		pos2 = 0,
 		pos3 = 0,
@@ -21,7 +20,6 @@ function dragElement(terrariumElement) {
 	terrariumElement.onpointerdown = pointerDrag;
     function pointerDrag(e) {
         e.preventDefault();
-        console.log(e);
         pos3 = e.clientX;
         pos4 = e.clientY;
         document.onpointermove = elementDrag;
@@ -32,7 +30,6 @@ document.onpointerup = stopElementDrag;
         pos2 = pos4 - e.clientY;
         pos3 = e.clientX;
         pos4 = e.clientY;
-        console.log(pos1, pos2, pos3, pos4);
         terrariumElement.style.top = terrariumElement.offsetTop - pos2 + 'px';
         terrariumElement.style.left = terrariumElement.offsetLeft - pos1 + 'px';
     }
@@ -48,10 +45,9 @@ for(i=document.querySelectorAll('.plant').length; i>0 ; i--) {
 nummbersArray.push(i)
 
 }
-  console.log(nummbersArray)  
+   
 nummbersArray.forEach( i => {
     document.getElementById('plant' + i).addEventListener("mouseover", zoom);
-console.log(document.getElementById('plant' + i))
 function zoom() {
     var GFG1 = document.getElementById('plant' + i);
     var currWidth1 = GFG1.clientWidth;
@@ -61,5 +57,6 @@ document.getElementById('plant'+ i).addEventListener("mouseout", zoomin);
 function zoomin() {
     var GFG1 = document.getElementById('plant' + i);
     var currWidth1 = GFG1.clientWidth;
- GFG1.style.width = (currWidth1 - 100) + "px";}
+ GFG1.style.width = (currWidth1 - 100) + "px";
+}
 })
